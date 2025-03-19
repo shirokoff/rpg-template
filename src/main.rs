@@ -21,7 +21,7 @@ fn setup(
 ) {
     commands.spawn((
         Camera3d::default(),
-        Transform::from_translation(Vec3::new(10.0, 10.0, 10.0))
+        Transform::from_translation(Vec3::new(0.0, 10.0, 10.0))
             .looking_at(Vec3::new(0.0, 0.0, 0.0), Vec3::Y),
     ));
 
@@ -46,5 +46,6 @@ fn setup(
             base_color: Color::WHITE,
             ..default()
         })),
+        Transform::from_translation(Vec3::new(0.0, -1.0, 0.0)),
     ));
 }
